@@ -109,21 +109,25 @@ section .content .form .input input{
     border-radius: 8px;
 }
 
-section .content .form .input input[type="submit"]{
+section .content .form button{
     background-color: #8ED9F9;
     color: black;
     outline: none;
     border: none;
+    border-radius: 8px;
     font-weight: 500;
     cursor: pointer;
     width: 180px;
-    margin-left: 120px;
-    margin-top: 28px;
-    margin-bottom: 5px;
+    height: 40px;
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
     font-size: 16px;
 }
 
-section .content .form .input input[type="submit"]:hover{
+section button:hover{
     background-color: #3EB5E8;
 }
 
@@ -139,6 +143,24 @@ section .content .form .input p a{
 
 section .content .form .terms{
     width: 380px;
+}
+
+section.input input:focus{
+    outline: 0;
+}
+
+section.input.success input{
+    border-color: #09c372;
+}
+
+section.input.error input{
+    border-color: #ff3860;
+}
+
+section.input.error{
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
 }
 
 @media (max-width: 800px){
@@ -175,10 +197,11 @@ section .content .form .terms{
         margin-right: auto;
     }
 
-    section .content .form .input input[type="submit"]{
+    section button{
         text-align: center;
         display: block;
         margin-left: auto;
         margin-right: auto;
     }
+
 }
