@@ -22,6 +22,7 @@
     position: fixed;
     justify-content: space-between;
     background-image: linear-gradient(white, white);
+    z-index: 1000;
 }
 
 .logo{
@@ -258,6 +259,12 @@ footer{
     margin-right: auto;
     margin-top: 20px;
     margin-bottom: 10px;
+}
+
+.cmpyprofile a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
 }
 
 .logocmp{
