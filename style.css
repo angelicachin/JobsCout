@@ -13,6 +13,11 @@
     background-position: center;
 }
 
+header.sticky{
+    padding: 12px 14%;
+    background: white;
+}
+
 .navbar{
     width: 100%;
     margin: 10;
@@ -42,7 +47,7 @@
 }
 
 .welcome{
-    margin-inline-start: 794px;
+    margin-inline-start: 48%;
 }
 
 .welcome a{
@@ -51,24 +56,52 @@
 }
 
 .navbar ul li a{
+    position: relative;
     text-decoration: none;
     color:black;
 }
 
-.navbar ul li a::after{
+.navbar ul li a::before{
+    position: absolute;
     content: '';
     height: 3px;
-    width: 0;
+    width: 100%;
     background: #DE56E1;
-    position: sticky;
     left: 0;
-    bottom: -10px;
-    transition: 0.10s;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .4s linear;
 }
 
-.navbar ul li a:hover:after{
-    width: 100%;
+.navbar ul li a:hover::before{
+    cursor: pointer;
+    transform: scaleX(1);
+    transform-origin: left;
 }
+
+.icons{
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+}
+
+#menu-icon{
+    font-size: 32px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* .menu-btn i{
+    color: black;
+    margin: 0 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#click {display: none;} */
 
 .signup{
     background-color:#b4e2f5;
@@ -350,7 +383,115 @@ footer{
     height: 50px;
 }
 
+@media (max-width: 800px){
+    /* .navbar ul{
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: white;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        text-align: center;
+        transition: all .5s;
+    }
 
+    .navbar ul li{
+        margin: 40px 0;
+        display: block;
+    }
+
+    .navbar ul li a{
+        font-size: 20px;
+        padding: 10px;
+        
+    } */  
+
+    .navlist{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -1000px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: rgb(100, 98, 98);
+    }
+
+    .navlist a{
+        display: block;
+        padding: 0.5rem;
+        margin: 1rem;
+        color: white;
+        border-left: 2px solid white;
+    }
+
+    .navlist a:hover,
+    .navlist a.active{
+        color: #3EB5E8;
+    }
+
+    .navbar ul li a::before{
+        width: 0;
+    }
+
+    #menu-icon{
+        display: initial;
+    }
+
+    .navlist.open{
+        top: 100%;
+    }
+
+    .welcome{
+        margin-inline-start: 13%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .signup{
+        border: none;
+    }
+
+    /* .menu-btn i{
+        display: block;
+        color: black;
+        font-size: 20px;
+    }
+
+    #click:checked ~ .navbar ul{
+        left: 0;
+    } */
+
+    .banner{
+        height: calc(100vh-70px);
+    }
+
+    .search{
+        width: 200px;
+        top: 52%;
+        position: absolute;
+        display: block;
+        text-align: center;
+        margin-inline-start: 18%;
+    }
+
+    .recommended h2{
+        margin-bottom: 20px;
+        font-size: 30px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .grid{
+        display: flex;
+        flex-direction: column;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+    }
+}
 
 
 

@@ -83,6 +83,10 @@ section .content .form h2{
     margin-right: auto;
 }
 
+section .content .form a{
+    text-decoration: none;
+}
+
 
 section .content .form .input{
     margin-bottom: 10px;
@@ -127,7 +131,7 @@ section .content .form button{
     font-size: 16px;
 }
 
-section button:hover{
+section .content .form button:hover{
     background-color: #3EB5E8;
 }
 
@@ -145,23 +149,24 @@ section .content .form .terms{
     width: 380px;
 }
 
-section.input input:focus{
+section .content .form .input input:focus{
     outline: 0;
 }
 
-section.input.success input{
+section .content .form .input .success input{
     border-color: #09c372;
 }
 
-section.input.error input{
+section .content .form .input.error input{
     border-color: #ff3860;
 }
 
-section.input.error{
+section  .content .form .input.error{
     color: #ff3860;
     font-size: 9px;
     height: 13px;
 }
+
 
 @media (max-width: 800px){
     section .imgBg{

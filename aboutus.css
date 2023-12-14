@@ -19,7 +19,6 @@ body{
     display: flex;
     align-items: center;
     position: fixed;
-    float: top;
     justify-content: space-between;
     background-image: linear-gradient(white, white);
     z-index: 1000;
@@ -51,23 +50,28 @@ body{
 }
 
 .navbar ul li a{
+    position: relative;
     text-decoration: none;
     color:black;
 }
 
-.navbar ul li a::after{
+.navbar ul li a::before{
+    position: absolute;
     content: '';
     height: 3px;
-    width: 0;
+    width: 100%;
     background: #DE56E1;
-    position: relative;
     left: 0;
-    bottom: -10px;
-    transition: 0.10s;
+    bottom: -5px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition:  transform .4s linear;
 }
 
-.navbar ul li a:hover:after{
-    width: 100%;
+.navbar ul li a:hover::before{
+    cursor: pointer;
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .signup{
@@ -206,6 +210,7 @@ body{
     margin-bottom: 50px;
     justify-content: center;
     align-items: center;
+    display: flex;
 }
 
 .location{
@@ -293,4 +298,62 @@ footer{
     margin-bottom: 15px;
     font-size: 13px;
     font-family: 'Judson', serif;
+}
+
+@media (max-width: 800px){
+    .navlist{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: -1000px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: rgb(100, 98, 98);
+    }
+
+    .navlist a{
+        display: block;
+        padding: 0.5rem;
+        margin: 1rem;
+        color: white;
+        border-left: 2px solid white;
+    }
+
+    .navlist a:hover,
+    .navlist a.active{
+        color: #3EB5E8;
+    }
+
+    .navbar ul li a::before{
+        width: 0;
+    }
+
+    #menu-icon{
+        display: initial;
+    }
+
+    .navlist.open{
+        top: 100%;
+    }
+
+    .container{
+        position: relative;
+        display:flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1px;
+        max-width: 800px;
+    }
+
+    .act img{
+        width: 300px;
+        height: 200px;
+        margin-left: 150px;
+        margin-top: 20px;
+        margin-bottom: 50px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
 }

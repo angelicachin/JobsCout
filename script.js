@@ -1,3 +1,17 @@
+const header = document.querySelector('header');
+
+window.addEventListener("scroll", function(){
+    header.classList.toggle("sticky", window.scrollY > 80)
+});
+
+et menu = document.querySelector('#menu-icon');
+let navlist = document.querySelector('.navlist');
+
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    navlist.classList.toggle('open');
+}
+
 const form = document.getElementById('form')
 const firstname = document.getElementById('firstname');
 const lastname = document.getElementById('lastname');
@@ -5,13 +19,13 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const confpass = document.getElementById('confpass');
 
-form.addEventListener('submit', e =>{
+form.addEventListener('submit', e => {
     e.preventDefault();
 
     validateInputs();
 });
 
-const setError = (element, message) =>{
+const setError = (element, message) => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
 
@@ -21,7 +35,7 @@ const setError = (element, message) =>{
 
 }
 
-const setSuccess = element =>{
+const setSuccess = element => {
     const inputControl = element.parentElement;
     const errorDisplay = inputControl.querySelector('.error');
 
@@ -51,13 +65,13 @@ const validateInputs = () => {
 
     if(emailValue === ''){
         setError(email, 'Email is required');
-    }else if(!email.endsWith('@gmail.com'){
+    }else if(!emailValue.endsWith('@gmail.com'){
         setError(email, 'Provide a valid email address');
     }else{
         setSuccess(email);
     }
 
-    if(password === ''){
+    if(passwordValue === ''){
         setError(password, 'Password is required');
     }else if(passwordValue.length < 8){
         setError(password, 'Password must be at least 8 character');
@@ -65,12 +79,12 @@ const validateInputs = () => {
         setSuccess(password);
     }
    
-    if(confpass === ''){
+    if(confpassValue === ''){
         setError(confpass, 'Please confirm your password');
     }else if(confpassValue != passwordValue){
         setError(confpass, "Password doesn't match");
     }else{
-        setSuccess(password);
+        setSuccess(confpass);
     }
 
 }
