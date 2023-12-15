@@ -5,6 +5,14 @@
     box-sizing: border-box;
 }
 
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
 header .icons #bar{
     cursor: pointer;
     padding: 8px 15px;
@@ -99,7 +107,7 @@ header .icons #bar:hover{
 .container{
     width: 100%;
     height: 150vh;
-    background-image: linear-gradient(rgba(42, 41, 41, 0.75), rgba(125, 123, 123, 0.75)), url(kimia\ farma\ bg.jpeg);
+    background-image: linear-gradient(rgba(73, 73, 73, 0.75), rgba(125, 123, 123, 0.75)), url(kimia\ farma\ bg.jpeg);
     background-size: cover;
     background-repeat: repeat-y;
     background-position: center;
@@ -163,19 +171,20 @@ header .icons #bar:hover{
 }
 
 .titlejob{
-    position: absolute;
+    margin-top: 120px;
     margin-left: 220px;
-    top:17%;
-    font-size: 30px;
+    font-size: 50px;
+    display: inline-block;
 }
 
 .job{
-    position: absolute;
+    position: relative;
     margin-left: 220px;
     top:23%;
     font-size: 25px;
     color: #558CDD;
     text-transform: uppercase;
+    margin-bottom: 50px;
 }
 
 .apply{
@@ -195,70 +204,29 @@ header .icons #bar:hover{
     margin-left: 70px;
     margin-right: 200px;
     text-align: justify;
-    position: absolute;
+    position: relative;
+    margin-bottom: 10px;
 }
 
-.description{
-    top: 35%
-}
-
-.vision{
-    position: absolute;
-    top: 60%;
+.vision, .mission, .benefit, .requirements{
+    position: relative;
     margin-left: 70px;
     font-weight: 600;
     font-size: 20px;
+    margin-bottom: 5px;
 }
 
 .visionp{
-    position: absolute;
-    top: 64%;
+    position: relative;
     margin-left: 70px;
 }
 
-.mission{
-    position: absolute;
-    top: 70%;
-    margin-left: 70px;
-    font-weight: 600;
-    font-size: 20px;
-}
 
-.list1{
-    position: absolute;
-    top: 74%;
+.list1, .list2, .list3{
+    position: relative;
     margin-left: 87px;
     margin-right: 200px;
-}
-
-.benefit{
-    position: absolute;
-    top: 86%;
-    margin-left: 70px;
-    font-weight: 600;
-    font-size: 20px;
-}
-
-.list2{
-    position: absolute;
-    top: 90%;
-    margin-left: 87px;
-    margin-right: 200px;
-}
-
-.requirements{
-    position: absolute;
-    top: 103%;
-    margin-left: 70px;
-    font-weight: 600;
-    font-size: 20px;
-    margin-right: 200px;
-}
-
-.list3{
-    position: absolute;
-    top: 108%;
-    margin-left: 87px;
+    margin-bottom: 20px;
 }
 
 .list1 li, .list2 li, .list3 li{
@@ -375,118 +343,54 @@ footer{
         border: none;
     }
 
-    .container, .container2, .container3, .container4, .container5, .container6{
+    .container, .container2, .container3, .container4, .container5{
         width: 100%;
-        height: 200vh;
+        height: 240vh;
     }
 
+    .container6{
+        width: 100%;
+        height: 265vh;
+    }
+   
     .profile img{
-        width: 100px;
-        height: 100px;
+        width: 70px;
+        height: 70px;
+        top: 11%;
     }
     
     .titlejob{
-        margin-left: 200px;
+        margin-top: 110px;
+        margin-left: 160px;
         font-size: 25px;
     }
     
     .job{
-        margin-left: 200px;
-        font-size: 20px;
+        margin-left: 160px;
+        font-size: 18px;
     }
 
     .apply{
-        padding: 8px 20px 8px;
-        font-size: 14px;
+        top: 13%;
+        padding: 6px 18px 6px;
+        font-size: 12px;
     }
     
-    .content p{
-        margin-right: 80px;
-    }
-    
-    .description{
-        top: 32%
-    }
-    
-    .vision{
-        top: 73%;
-    }
-    
-    .visionp{
-        top: 77%;
-    }
-    
-    .mission{
-        top: 83%;
-    }
-    
-    .list1{
-        top: 87%;
-        margin-right: 80px;
-    }
-    
-    .benefit{
-        top: 107%;
-    }
-    
-    .list2{
-        top: 112%;
-        margin-right: 80px;
-    }
-    
-    .requirements{
-        top: 135%;
-        margin-right: 80px;
-    }
-    
+    .content p,
+    .list1,
+    .list2,
     .list3{
-        top: 140%;
-        margin-right: 80px;
+        margin-right: 60px;
     }
+
     
     .list1 li, .list2 li, .list3 li{
         margin-bottom: 2px;
     }
 }
 
-@media (max-width: 650px) {
-    .container, .container2, .container3, .container4, .container5, .container6{
-        width: 100%;
-        height: 250vh;
-    }
-    
-    .vision{
-        top: 90%;
-    }
-    
-    .visionp{
-        top: 94%;
-    }
-    
-    .mission{
-        top: 104%;
-    }
-    
-    .list1{
-        top: 108%;
-        margin-right: 60px;
-    }
-    
-    .benefit{
-        top: 134%;
-    }
-    
-    .list2{
-        top: 138%;
-        margin-right: 60px;
-    }
-    
-    .requirements{
-        top: 167%;
-        margin-right: 60px;
-    }
-    
-    .list3{
-        top: 171%;
+@media (max-width: 500px){
+    .welcome{
+        display: none;
     }
 }

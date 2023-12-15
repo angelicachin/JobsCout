@@ -368,16 +368,16 @@ footer{
         border-radius: 10px;
         background-color: white;
         padding: 20px;
-        width: 250px;
-        height: 200px;
+        width: 198px;
+        height: 160px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 20px;
-        margin-bottom: 10px;
+        margin-bottom: 6px;
     }
 
     .content2 h1{
-        font-size: 15px;
+        font-size: 14px;
     }
     
     .cmpyprofile a{
@@ -387,31 +387,36 @@ footer{
     }
 
     .logocmp{
-        width: 60px;
-        height: 60px;
+        width: 45px;
+        height: 45px;
+        margin-right: 10px;
     }
 
     .rating{
-        width:110px;
-        height: 22px;
-        margin-bottom: 15px;
+        width:80px;
+        height: 16px;
+        margin-bottom: 10px;
     }
 
     .cmpyprofile h1{
-        font-size: 20px;
+        font-size: 15px;
+    }
+
+    .searchbar{
+        top: 18%;
     }
 
     .srchbar{
-        width: 450px;
+        width: 350px;
     }
 
     .job{
-        font-size: 12px;
+        font-size: 9px;
     }
 
     .description{
-        margin-top: 5px;
-        font-size: 10px;
+        margin-top: 2px;
+        font-size: 9px;
     }
     
     .page{
@@ -421,5 +426,11 @@ footer{
         margin-right: auto;
         display: block;
         align-items:center;
+    }
+}
+
+@media (max-width: 500px){
+    .welcome{
+        display: none;
     }
 }

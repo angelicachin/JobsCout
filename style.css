@@ -13,6 +13,14 @@
     background-position: center;
 }
 
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+}
+
 header .icons #bar{
     cursor: pointer;
     padding: 8px 15px;
@@ -268,6 +276,7 @@ footer{
 @media (max-width: 800px){
     header .icons #bar{
         visibility: inherit;
+        margin-right: 10px;
     }
 
     header .navlist{
@@ -312,10 +321,17 @@ footer{
         width: 0;
     }
 
+    .logo{
+        width: 130px;
+        height: 30px;
+        cursor: pointer;
+    }
+
     .welcome{
-        margin-inline-start: 4%;
+        margin-inline-start: 3%;
         align-items: center;
         text-align: center;
+        font-size: 14px;
     }
 
     .signup{
@@ -326,9 +342,16 @@ footer{
         height: calc(100vh-70px);
     }
 
+    .banner h1{
+        font-size: 30px;
+    }
+
+    .srch{
+        width: 350px;
+    } 
     .recommended h2{
         margin-bottom: 20px;
-        font-size: 30px;
+        font-size: 20px;
         text-align: center;
         align-items: center;
     }
@@ -342,25 +365,34 @@ footer{
     }
     
     .grid > * {
-        width: 100%; 
+        width: 90%; 
     }
 
     .rcmjobs{
-        width: 220px;
-        height: 250px;
+        width: 175px;
+        height: 180px;
         text-align: center;
-        margin-left: 14px;
-        margin-top: 20px;
-        margin-right: -50px;
-        margin-bottom: 30px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
     }
 
+    .text{
+        font-size: 13px;
+    }
     .image img{
-        width: 180px;
-        height: 110px;
+        width: 140px;
+        height: 70px;
         margin-bottom: 8px;
     }
     
+}
+
+@media (max-width: 500px){
+    .welcome{
+        display: none;
+    }
 }
 
 

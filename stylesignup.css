@@ -74,7 +74,7 @@ section .content .form h2{
     font-size: 60px;
     width: 400px;
     margin-bottom: 3px;
-    display: inline-block;
+    display: block;
     letter-spacing: 1px;
     color: #1B9ED6;
     text-align: center;
@@ -197,9 +197,9 @@ section  .content .form .input.error{
     }
 
     section .content .form{
-        width: 98%;
+        width: 100%;
         background: rgb(255 255 255 / 0.9);
-        padding: 40px;
+        padding: 30px;
         margin: 50px;
     }
     section .content .form h2{
