@@ -204,8 +204,8 @@ header .icons #bar:hover{
     margin-top: 20px;
     margin-bottom: 50px;
     justify-content: center;
-    align-items: center;
-    display: flex;
+    text-align: center;
+    float: center;
 }
 
 .location{
@@ -363,6 +363,11 @@ footer{
         width: 100%;
     }
 
+    .maps img{
+        width: 300px;
+        height: 250px;
+    }
+
     .act{
         width: 100%;
         display: flex;
@@ -374,6 +379,6 @@ footer{
     .act img{
         width: 300px;
         height: 200px;
-        margin-left: 10px;
+        float: center;
     }
 }

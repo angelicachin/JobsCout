@@ -230,10 +230,10 @@ footer{
     
 }
 
-.content h1{
-    font-size: 40px;
-    margin-top: 80px;
+.content2 h1{
+    font-size: 25px;
     color: black;
+    font-family: 'Julius Sans One', sans-serif;
 }
 
 .searchbar{
@@ -377,7 +377,7 @@ footer{
     }
 
     .content2 h1{
-        font-size: 20px;
+        font-size: 15px;
     }
     
     .cmpyprofile a{
