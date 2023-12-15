@@ -5,6 +5,19 @@
     box-sizing: border-box;
 }
 
+header .icons #bar{
+    cursor: pointer;
+    padding: 8px 15px;
+    text-align: center;
+    font-size: 20px;
+    visibility: hidden;
+}
+
+header .icons #bar:hover{
+    color: #3EB5E8;
+}
+
+
 .navbar{
     width: 100%;
     margin: 10;
@@ -34,7 +47,7 @@
 }
 
 .welcome{
-    margin-inline-start: 794px;
+    margin-inline-start: 48%;
 }
 
 .welcome a{
@@ -58,7 +71,7 @@
     bottom: -5px;
     transform: scaleX(0);
     transform-origin: right;
-    transition:  transform .4s linear;
+    transition: transform .4s linear;
 }
 
 .navbar ul li a:hover::before{
@@ -82,7 +95,6 @@
     cursor: pointer;
     background-color: #3EB5E8;
 }
-
 
 .container{
     width: 100%;
@@ -304,4 +316,177 @@ footer{
     margin-bottom: 15px;
     font-size: 13px;
     font-family: 'Judson', serif;
+}
+
+@media (max-width: 800px){
+    header .icons #bar{
+        visibility: inherit;
+    }
+
+    header .navlist{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+        padding: 1rem;
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    }
+
+    header .navlist.active{
+        clip-path: polygon(0 0,100% 0,100% 100%,0% 100%);
+    }
+
+    header .navlist a{
+        display: block;
+        padding: 10px;
+        margin: 10px;
+        font-size: 20px;
+        background: rgb(191, 190, 190);
+        border-radius: 8px;
+    }
+
+    header .navlist a:hover{
+        background: #b4e2f5;
+    }
+
+    .navbar ul li{
+        display: block;
+    }
+
+    .navlist a:hover,
+    .navlist a.active{
+        color: white;
+    }
+
+    .navbar ul li a::before{
+        width: 0;
+    }
+
+    .welcome{
+        margin-inline-start: 4%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .signup{
+        border: none;
+    }
+
+    .container, .container2, .container3, .container4, .container5, .container6{
+        width: 100%;
+        height: 200vh;
+    }
+
+    .profile img{
+        width: 100px;
+        height: 100px;
+    }
+    
+    .titlejob{
+        margin-left: 200px;
+        font-size: 25px;
+    }
+    
+    .job{
+        margin-left: 200px;
+        font-size: 20px;
+    }
+
+    .apply{
+        padding: 8px 20px 8px;
+        font-size: 14px;
+    }
+    
+    .content p{
+        margin-right: 80px;
+    }
+    
+    .description{
+        top: 32%
+    }
+    
+    .vision{
+        top: 73%;
+    }
+    
+    .visionp{
+        top: 77%;
+    }
+    
+    .mission{
+        top: 83%;
+    }
+    
+    .list1{
+        top: 87%;
+        margin-right: 80px;
+    }
+    
+    .benefit{
+        top: 107%;
+    }
+    
+    .list2{
+        top: 112%;
+        margin-right: 80px;
+    }
+    
+    .requirements{
+        top: 135%;
+        margin-right: 80px;
+    }
+    
+    .list3{
+        top: 140%;
+        margin-right: 80px;
+    }
+    
+    .list1 li, .list2 li, .list3 li{
+        margin-bottom: 2px;
+    }
+}
+
+@media (max-width: 650px) {
+    .container, .container2, .container3, .container4, .container5, .container6{
+        width: 100%;
+        height: 250vh;
+    }
+    
+    .vision{
+        top: 90%;
+    }
+    
+    .visionp{
+        top: 94%;
+    }
+    
+    .mission{
+        top: 104%;
+    }
+    
+    .list1{
+        top: 108%;
+        margin-right: 60px;
+    }
+    
+    .benefit{
+        top: 134%;
+    }
+    
+    .list2{
+        top: 138%;
+        margin-right: 60px;
+    }
+    
+    .requirements{
+        top: 167%;
+        margin-right: 60px;
+    }
+    
+    .list3{
+        top: 171%;
+    }
 }

@@ -11,27 +11,32 @@
     <link rel="stylesheet" href="detailpage.css">
 </head>
 <body>
-    <div class ="navbar">
-        <img src="LOGO.png" alt="" class = "logo">
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
-        <div class="welcome">
-            <a href="">Welcome to JobsCout!</a>
+    <header>
+        <div class ="navbar">
+            <img src="LOGO.png" alt="" class = "logo">
+            <ul class="navlist">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <div class="welcome">
+                <a href="">Welcome to JobsCout!</a>
+            </div>
+            <a href="signup.html">
+                <button class="signup">Sign Up</button>
+            </a>
+            <div class="icons">
+                <i class="fas fa-bars" id="bar"></i>
+            </div>
         </div>
-        <a href="signup.html">
-            <button class="signup">Sign Up</button>
-        </a>
-    </div>
+    </header>
 
     <div class="container6">
         <div class="profile">
             <img src="laku emas 2.png" alt="" class="logocmp">
             <div class="titlejob">Laku Emas</div>
             <div class="job">Product Designer</div>
-            <button class="apply">Apply</button>
+            <a href="signup.html"><button class="apply">Apply</button></a>
         </div>
         <div class="content">
             <p class="description">Laku Emas is the first gold buying and selling service in Indonesia which can be accessed from the website and mobile application 
@@ -89,5 +94,7 @@
             </ul>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

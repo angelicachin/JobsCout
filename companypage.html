@@ -7,24 +7,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Judson&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="icon" href="LOGO.png">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="company.css">
 </head>
 <body>
-    <div class ="navbar">
-        <img src="LOGO.png" alt="" class = "logo">
-        <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="#">ABOUT US</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
-        <div class="welcome">
-            <a href="">Welcome to JobsCout!</a>
+    <header>
+        <div class ="navbar">
+            <img src="LOGO.png" alt="" class = "logo">
+            <ul class="navlist">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="aboutus.html">ABOUT US</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+            <div class="welcome">
+                <a href="">Welcome to JobsCout!</a>
+            </div>
+            <a href="signup.html">
+                <button class="signup">Sign Up</button>
+            </a>
+            <div class="icons">
+                <i class="fas fa-bars" id="bar"></i>
+            </div>
+            
         </div>
-        <a href="signup.html">
-            <button class="signup">Sign Up</button>
-        </a>
-    </div>
+    </header>
 
     <div class="rectangle">
         <div class="content2">
@@ -113,5 +120,7 @@
             </ul>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

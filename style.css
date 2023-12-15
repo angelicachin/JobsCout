@@ -13,10 +13,18 @@
     background-position: center;
 }
 
-header.sticky{
-    padding: 12px 14%;
-    background: white;
+header .icons #bar{
+    cursor: pointer;
+    padding: 8px 15px;
+    text-align: center;
+    font-size: 20px;
+    visibility: hidden;
 }
+
+header .icons #bar:hover{
+    color: #3EB5E8;
+}
+
 
 .navbar{
     width: 100%;
@@ -80,29 +88,6 @@ header.sticky{
     transform-origin: left;
 }
 
-.icons{
-    display: flex;
-    align-items: center;
-    padding: 8px 15px;
-}
-
-#menu-icon{
-    font-size: 32px;
-    z-index: 10001;
-    cursor: pointer;
-    display: none;
-}
-
-
-/* .menu-btn i{
-    color: black;
-    margin: 0 20px;
-    cursor: pointer;
-    display: none;
-}
-
-#click {display: none;} */
-
 .signup{
     background-color:#b4e2f5;
     color: black;
@@ -134,13 +119,14 @@ header.sticky{
 }
 
 .search{
-    width: 600px;
+    width: 100%;
     position: absolute;
     top: 52%;
     transform: translateY(-50%);
     float: center;
     text-align: center;
-    margin: 0 460px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .srch{
@@ -279,172 +265,55 @@ footer{
     gap: 2px;
 }
 
-/* Company Profile Page */
-
-.cmpyprofile{
-    border: 1px solid gray;
-    border-radius: 10px;
-    background-color: white;
-    padding: 20px;
-    width: 480px;
-    height: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.cmpyprofile a{
-    text-decoration: none;
-    color: black;
-    cursor: pointer;
-}
-
-.logocmp{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    float:left;
-    border: 1px solid black;
-    margin-right: 20px;
-}
-
-.rectangle{
-    width: 100%;
-    height: 27vh;
-    background-image: linear-gradient(#B9E8F3, #B9E8F3);
-    background-size: cover;
-    background-position: center;
-}
-
-.content2{
-    width: 100%;
-    position: absolute;
-    top: 14%;
-    transform: translateY(-25%);
-    text-align: center;
-    font-weight: normal;
-    
-}
-
-.content h1{
-    font-size: 40px;
-    margin-top: 80px;
-}
-
-.searchbar{
-    width: 600px;
-    top: 19%;
-    position: absolute;
-    text-align: center;
-    margin: 0 395px;
-}
-
-.srchbar{
-    width: 725px;
-    height: 30px;
-    padding: 8px 20px 8px 45px;
-    background-color: white; 
-    border: 0.5px solid black;
-    border-radius: 10px;
-    background-repeat: no-repeat;
-    background-size: 25px;
-    background-position: 10px;
-    background-image: url('search.png');
-    box-shadow: 4px gray;
-    font-size: 15px;
-}
-
-.rating{
-    width: 180px;
-    height: 35px;
-}
-
-.cmpyprofile h1{
-    font-size: 34px;
-}
-
-.job{
-    color: #558CDD;
-    text-transform: uppercase;
-    font-size: 24px;
-}
-
-.description{
-    margin-top: 10px;
-    color: #7D7777;
-    font-size: 18px;
-}
-
-.page{
-    margin-left: 20px;
-    margin-top: 10px;
-    width: 240px;
-    height: 50px;
-}
-
 @media (max-width: 800px){
-    /* .navbar ul{
+    header .icons #bar{
+        visibility: inherit;
+    }
+
+    header .navlist{
         position: absolute;
-        top: 70px;
+        top: 100%;
         left: 0;
+        right: 0;
         background: white;
-        height: 100vh;
-        width: 100%;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+        padding: 1rem;
+        clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    }
+
+    header .navlist.active{
+        clip-path: polygon(0 0,100% 0,100% 100%,0% 100%);
+    }
+
+    header .navlist a{
         display: block;
-        text-align: center;
-        transition: all .5s;
+        padding: 10px;
+        margin: 10px;
+        font-size: 20px;
+        background: rgb(191, 190, 190);
+        border-radius: 8px;
+    }
+
+    header .navlist a:hover{
+        background: #b4e2f5;
     }
 
     .navbar ul li{
-        margin: 40px 0;
         display: block;
-    }
-
-    .navbar ul li a{
-        font-size: 20px;
-        padding: 10px;
-        
-    } */ 
-
-    .navlist{
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: -1000px;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        background: rgb(100, 98, 98);
-    }
-
-    .navlist a{
-        display: block;
-        padding: 0.5rem;
-        margin: 1rem;
-        color: white;
-        border-left: 2px solid white;
     }
 
     .navlist a:hover,
     .navlist a.active{
-        color: #3EB5E8;
+        color: white;
     }
 
     .navbar ul li a::before{
         width: 0;
     }
 
-    #menu-icon{
-        display: initial;
-    }
-
-    .navlist.open{
-        top: 100%;
-    }
-
     .welcome{
-        margin-inline-start: 13%;
+        margin-inline-start: 4%;
         align-items: center;
         text-align: center;
     }
@@ -453,27 +322,8 @@ footer{
         border: none;
     }
 
-    /* .menu-btn i{
-        display: block;
-        color: black;
-        font-size: 20px;
-    }
-
-    #click:checked ~ .navbar ul{
-        left: 0;
-    } */
-
     .banner{
         height: calc(100vh-70px);
-    }
-
-    .search{
-        width: 200px;
-        top: 52%;
-        position: absolute;
-        display: block;
-        text-align: center;
-        margin-inline-start: 18%;
     }
 
     .recommended h2{
@@ -483,14 +333,34 @@ footer{
         align-items: center;
     }
 
-    .grid{
-        display: flex;
-        flex-direction: column;
+    .grid {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 10px; 
         align-items: center;
         justify-content: center;
-        margin: auto;
     }
+    
+    .grid > * {
+        width: 100%; 
+    }
+
+    .rcmjobs{
+        width: 220px;
+        height: 230px;
+        text-align: center;
+        margin-left: 14px;
+        margin-top: 20px;
+        margin-right: -50px;
+        margin-bottom: 30px;
+    }
+
+    .image img{
+        width: 180px;
+        height: 110px;
+        margin-bottom: 8px;
+    }
+    
 }
 
 
