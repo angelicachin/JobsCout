@@ -92,7 +92,7 @@ section .content .form .input{
     margin-bottom: 10px;
 }
 
-section .content .form .input span{
+section .content .form .input label{
     font-size: 16px;
     margin-bottom: 5px;
     display: inline-block;
@@ -165,6 +165,15 @@ section  .content .form .input.error{
     color: #ff3860;
     font-size: 9px;
     height: 13px;
+}
+
+#error, #error2, #error3, #error4, #error5{
+    color: red;
+    font-size: 12px;
+    display: inline-block;
+    font-weight: 300;
+    letter-spacing: normal;
+    margin-left: 0;
 }
 
 

@@ -1,90 +1,64 @@
-const header = document.querySelector('header');
+// const header = document.querySelector('header');
 
-window.addEventListener("scroll", function(){
-    header.classList.toggle("sticky", window.scrollY > 80)
-});
+// window.addEventListener("scroll", function(){
+//     header.classList.toggle("sticky", window.scrollY > 80)
+// });
 
-et menu = document.querySelector('#menu-icon');
-let navlist = document.querySelector('.navlist');
+// let menu = document.querySelector('#menu-icon');
+// let navlist = document.querySelector('.navlist');
 
-menu.onclick = () => {
-    menu.classList.toggle('bx-x');
-    navlist.classList.toggle('open');
-}
+// menu.onclick = () => {
+//     menu.classList.toggle('bx-x');
+//     navlist.classList.toggle('open');
+// }
 
-const form = document.getElementById('form')
-const firstname = document.getElementById('firstname');
-const lastname = document.getElementById('lastname');
-const email = document.getElementById('email');
-const password = document.getElementById('password');
-const confpass = document.getElementById('confpass');
 
-form.addEventListener('submit', e => {
+document.getElementById('form').addEventListener('submit', function (e){
     e.preventDefault();
+    let firstname = document.getElementById('firstname').value;
+    let lastname = document.getElementById('lastname').value;
+    let email = document.getElementById('email').value;
+    let password = document.getElementById('password').value;
+    let confpass = document.getElementById('confpass').value;
 
-    validateInputs();
+    if(firstname === ''){
+        document.getElementById('error').innerHTML = "First name is required and can't be empty";
+    }else if(firstname.length < 3){
+        document.getElementById('error').innerHTML = 'First name length is must be more than 2';
+    }else{
+        document.getElementById('error').innerHTML = '';
+    }
+
+    if(lastname === ''){
+        document.getElementById('error2').innerHTML = "Last name is required and can't be empty";
+    }else if(lastname < 2){
+        document.getElementById('error2').innerHTML = 'Last name length is must be more than 2';
+    }else{
+        document.getElementById('error2').innerHTML = '';
+    }
+
+    if(email === ''){
+        document.getElementById('error3').innerHTML =  "Email is required and can't be empty";
+    }else if(!email.endsWith('@gmail.com')){
+        document.getElementById('error3').innerHTML = 'Provide a valid email address and must end with @gmail.com';
+    }else{
+        document.getElementById('error3').innerHTML = '';
+    }
+
+    if(password === ''){
+        document.getElementById('error4').innerHTML = "Password is required and can't be empty";
+    }else if(password.length < 8){
+        document.getElementById('error4').innerHTML = 'Password must be at least 8 character';
+    }else{
+        document.getElementById('error4').innerHTML = '';
+    }
+
+    if(confpass === ''){
+        document.getElementById('error5').innerHTML = 'Please confirm your password';
+    }else if(confpass != password){
+        document.getElementById('error5').innerHTML = "Password doesn't match";
+    }else{
+        document.getElementById('error5').innerHTML = '';
+    }
+
 });
-
-const setError = (element, message) => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = message;
-    inputControl.classList.add('error');
-    inputControl.classList.remove('success');
-
-}
-
-const setSuccess = element => {
-    const inputControl = element.parentElement;
-    const errorDisplay = inputControl.querySelector('.error');
-
-    errorDisplay.innerText = '';
-    inputControl.classList.add('success');
-    inputControl.classList.remove('error');
-}
-
-const validateInputs = () => {
-    const firstnameValue = firstname.value.trim();
-    const lastnameValue = lastname.value.trim();
-    const emailValue = email.value.trim();
-    const passwordValue = password.value.trim();
-    const confpassValue = confpass.value.trim();
-
-    if(firstnameValue === ''){
-        setError(firstname, 'First Name is required');
-    }else{
-        setSuccess(firstname);
-    }
-
-    if(lastnameValue === ''){
-        setError(lastname, 'Last Name is required');
-    }else{
-        setSuccess(lastname);
-    }
-
-    if(emailValue === ''){
-        setError(email, 'Email is required');
-    }else if(!emailValue.endsWith('@gmail.com'){
-        setError(email, 'Provide a valid email address');
-    }else{
-        setSuccess(email);
-    }
-
-    if(passwordValue === ''){
-        setError(password, 'Password is required');
-    }else if(passwordValue.length < 8){
-        setError(password, 'Password must be at least 8 character');
-    }else{
-        setSuccess(password);
-    }
-   
-    if(confpassValue === ''){
-        setError(confpass, 'Please confirm your password');
-    }else if(confpassValue != passwordValue){
-        setError(confpass, "Password doesn't match");
-    }else{
-        setSuccess(confpass);
-    }
-
-}
