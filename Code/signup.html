@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Judson&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Judson&family=Londrina+Solid&display=swap" rel="stylesheet">
+    <link rel="icon" href="LOGO.png">
+    <link rel="stylesheet" href="stylesignup.css">
+</head>
+<body>
+
+    <section>
+        <div class="imgBg">
+            <img src="teamwork.jpg" alt="">
+        </div>
+        <div class="content">
+            <div class="form">
+                <a href="index.html"><img src="x.png" alt="" class="xlogo"></a>
+                <h2>SIGN UP</h2>
+                <div class="navbarsg">
+                    <img src="LOGO.png" alt="" class = "logo">
+                </div>
+                <form action="" id="form">
+                    <div class="input">
+                        <label for="firstname">First Name</label>
+                        <input type="text" name="fname" placeholder="Enter your first name" id="firstname">
+                        <p id="error"></p>
+                    </div>
+                    <div class="input">
+                        <label for="lastname">Last Name</label>
+                        <input type="text" name="lname" placeholder="Enter your last name" id="lastname">
+                        <p id="error2"></p>
+                    </div>
+                    <div class="input">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" placeholder="Enter your email address" id="email">
+                        <p id="error3"></p>
+                    </div>
+                    <div class="input">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" placeholder="Enter your password" id="password">
+                        <p id="error4"></p>
+                    </div>
+                    <div class="input">
+                        <label for="confpass">Confirmation Password</label>
+                        <input type="password" name="confpass" placeholder="Enter your confirmation password" id="confpass">
+                        <p id="error5"></p>
+                    </div>
+                    <div class="terms">
+                        <p>By continuing, you agree to accept our <span style="color: #4187F0;">TERMS</span> and <span style="color: #4187F0;">PRIVACY POLICY</span></p>
+                    </div>
+                    <!-- <a href="companypage.html"> -->
+                        <button type="submit">Sign Up</button>
+                    <!-- </a> -->
+                    <div class="input">
+                        <p class="account">Already have an account? <a href="signin.html">Sign in</a></p>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+    <script src="signup.js"></script>
+</body>
+</html>
